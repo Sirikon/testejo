@@ -36,6 +36,11 @@
 				done();
 			}, 2000);
 		}
+		myTestejo.new = function(b64, done){
+			setTimeout(function(){
+				done(new Testejo.File(3,'Archivo 3', b64));
+			}, 2000);
+		}
 		myTestejo.init();
 	</script>
 </body>

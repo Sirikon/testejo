@@ -63,7 +63,7 @@
 	overflow: scroll;
 }
 
-*.tj-content div.tj-file {
+*.tj-content div[tj-file] {
 	background-color: white;
 	display: inline-block;
 	margin: 10px 0px 0px 10px;
@@ -80,7 +80,7 @@
 	user-select: none;
 }
 
-*.tj-content div.tj-file h3 {
+*.tj-content div[tj-file] h3 {
 	margin: 5px 0px;
 	font-family: Arial;
 	font-weight: normal;
@@ -95,6 +95,13 @@
 	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
 	border: 3px solid white;
 	border-radius: 3px;
+	position: relative;
+}
+
+*.tj-content div[tj-file] div.tj-file-thumbnail input[type='checkbox'] {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
 }
 
 *.tj-content div[tj-file].selected div.tj-file-thumbnail {
