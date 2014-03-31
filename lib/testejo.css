@@ -27,10 +27,15 @@
 	padding: 0px 10px;
 	display: inline-block;
 	vertical-align: top;
-	font-size: 16px;
+	font-size: 21px;
 	line-height: 28px;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	cursor: pointer;
+}
+
+*.tj-toolbar button[role] i{
+	line-height: 28px;
 }
 
 *.tj-toolbar button[role].hidden {
@@ -49,7 +54,7 @@
 	color: white;
 }
 
-*.tj-content {
+*.tj-content, *.tj-uploader {
 	height: 100%;
 	padding-top: 40px;
 	padding-bottom: 10px;
@@ -59,18 +64,11 @@
 }
 
 *.tj-content div.tj-file {
-	width: 100px;
-	height: 100px;
 	background-color: white;
 	display: inline-block;
 	margin: 10px 0px 0px 10px;
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
-	border-radius: 3px;
-	border: 3px solid white;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	background-position: center;
-	background-size: cover;
 	position: relative;
 	vertical-align: top;
 	cursor: pointer;
@@ -82,20 +80,47 @@
 	user-select: none;
 }
 
-*.tj-content div.tj-file.selected {
+*.tj-content div.tj-file h3 {
+	margin: 5px 0px;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+*.tj-content div[tj-file] div.tj-file-thumbnail {
+	background-position: center;
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+	border: 3px solid white;
+	border-radius: 3px;
+}
+
+*.tj-content div[tj-file].selected div.tj-file-thumbnail {
 	border-color: rgb(108, 164, 207);
 }
 
-*.tj-content div.tj-file h3 {
-	font-size: 12px;
+div[tj-loading] {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	display: none;
+	margin: -75px 0px 0px -75px;
 	background-color: rgba(0,0,0,0.5);
 	color: white;
-	width: 100%;
-	padding: 3px;
-	box-sizing: border-box;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	margin: 0px;
-	font-family: Arial;
+	line-height: 150px;
+	font-size: 90px;
+	text-align: center;
+	border-radius: 3px;
+}
+
+div[tj-loading].show {
+	display: inline-block;
+}
+
+div[tj-loading] i {
+	line-height: 150px;
 }
