@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Testejo</title>
+	<script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+	<script src="../bower_components/handlebars/handlebars.min.js" type="text/javascript"></script>
+	<script src="../lib/testejo.js" type="text/javascript"></script>
+	<style>
+		body {
+			background-color: lightgrey;
+		}
+		#myTestejo {
+			display:inline-block;
+			width: 400px;
+			height: 300px;
+			background-color: white;
+		}
+	</style>
+	<link href="../lib/testejo.css" rel="stylesheet" />
+</head>
+<body>
+
+	<div id="myTestejo" class="tj-testejo"></div>
+
+	<script>
+		var myTestejo = new Testejo($('#myTestejo'), '../lib/templates');
+		myTestejo.list = function(done){
+			done([
+				new Testejo.File(1, 'Archivo 1', 'http://seiscocos.com/nuevaweb/res/akira.png'),
+				new Testejo.File(2, 'Archivo 2', 'http://seiscocos.com/nuevaweb/res/logo.png')
+			]);
+		}
+		myTestejo.remove = function(listaDelete, done){
+			console.log(listaDelete);
+			setTimeout(function(){
+				done();
+			}, 2000);
+		}
+		myTestejo.init();
+	</script>
+</body>
+</html>
