@@ -54,6 +54,12 @@
 	color: white;
 }
 
+*.tj-toolbar button[role='back']{
+	background-color: #3276b1;
+	border: 1px solid #285e8e;
+	color: white;
+}
+
 *.tj-content, *.tj-uploader {
 	height: 100%;
 	padding-top: 40px;

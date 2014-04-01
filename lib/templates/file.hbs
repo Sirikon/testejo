@@ -2,5 +2,7 @@
 	<div class="tj-file-thumbnail" tj-thumbnail="{{thumbnail}}" style="background-image: url('{{thumbnail}}');">
 		<input type="checkbox" />
 	</div>
-	<h3>{{name}}</h3>
+	{{#if name}}
+		<h3>{{name}}</h3>
+	{{/if}}
 </div>
